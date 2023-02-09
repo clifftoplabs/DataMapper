@@ -21,7 +21,7 @@ import time
 from typing import AnyStr, ByteString, Optional
 
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("data_mapper")
 
 MD5_LENGTH = len(hashlib.md5().digest())
 
@@ -83,6 +83,7 @@ def map_file(file_path: AnyStr, accumulator: FileAccumulator):
 def map_files_for_directory(directory_name: AnyStr, run_serially: bool):
   threads = []
   accumulator = FileAccumulator(run_serially)
+  # Generate synthetic input directory tree and walk through its components
   for (root, _, files) in os.walk(directory_name):
     for file in files:
       file_path = os.path.join(root, file)

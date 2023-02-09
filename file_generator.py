@@ -13,7 +13,7 @@ import argparse
 import logging
 
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("file_generator")
 
 def main():
   # Parse the input arguments to get the run options and directory name
