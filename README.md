@@ -12,6 +12,17 @@ You can can also see a full list of options by looking at the help documentation
 python3 data_mapper.py [-h | --help]
 ```
 
+### Example Output
+```
+-> % python3 data_mapper.py example_directory
+INFO:__main__:Applying map function to all files in directory: example_directory
+INFO:__main__:Completed mapping of 500.0027 MB in 2.8928 sec with 0.1728 GB/s throughput.
+
+-> % python3 data_mapper.py example_directory -s
+INFO:__main__:Applying map function to all files in directory: example_directory
+INFO:__main__:Completed mapping of 500.0027 MB in 12.6360 sec with 0.0396 GB/s throughput.
+```
+
 ## File Generator
 
 Tool to generate files of specified length in bytes.
